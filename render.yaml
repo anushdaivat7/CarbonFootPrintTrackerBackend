@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: carbon-footprint-backend
+    env: java
+    buildCommand: "./mvnw clean install"
+    startCommand: "java -jar target/*.jar"
+    envVars:
+      - key: PORT
+        value: 8080
+      - key: spring.data.mongodb.uri
+        value: mongodb+srv://carbontracker:carbontracker@anush.1npamlo.mongodb.net/carbontracker?retryWrites=true&w=majority
