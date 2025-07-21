@@ -12,7 +12,7 @@
     </parent>
 
     <groupId>com.example</groupId>
-    <artifactId>carbon-tracker</artifactId>
+    <artifactId>CarbonFootPrintTrackerBackend</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>carbon-tracker</name>
     <description>carbon-tracker</description>
