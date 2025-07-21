@@ -1,11 +1,11 @@
 services:
   - type: web
-    name: carbon-footprint-backend
+    name: carbon-tracker
     env: java
-    buildCommand: "./mvnw clean install"
-    startCommand: "java -jar target/*.jar"
+    plan: free
+    buildCommand: "./mvnw clean package -DskipTests"
+    startCommand: "java -jar target/carbon-tracker-0.0.1-SNAPSHOT.jar"
+    autoDeploy: true
     envVars:
-      - key: PORT
-        value: 8080
-      - key: spring.data.mongodb.uri
-        value: mongodb+srv://carbontracker:carbontracker@anush.1npamlo.mongodb.net/carbontracker?retryWrites=true&w=majority
+      - key: SPRING_PROFILES_ACTIVE
+        value: production
